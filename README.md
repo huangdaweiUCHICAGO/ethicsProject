@@ -13,9 +13,31 @@ Keep in mind that this randomGen model-agnostic method is by no means a definiti
 This approach is inspired by the Monte Carlo Method for Approximating Pi where randomly generated points are used to approximate Pi. Check out here: https://en.wikipedia.org/wiki/Monte_Carlo_method.
 
 ## Project.ipynb
-In this jupyter notebook file, we will be testing this randomGen model-agnostic model on both interpretable and black box models. We will be frequently comparing our randomGen method with the Shapley Value method because they both assess the weights/contribution of each variable to the output.
+In this jupyter notebook file, we will be testing this randomGen model-agnostic model on both interpretable and black box models. We will be frequently comparing our randomGen method with the Shapley Value method because they both assess the weights/contribution of each variable to the output. In addition we will be making note of our observations here as well.
 
 ## How to run randMethod.py
+Here is an example on how we use randomGen to access the weights of variables in a linear regression:
+```
+import randMethod
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+data = pd.read_csv('hour.csv')
+dataSamp = data.sample(n=100)
+
+X = data[['season','yr','hr','holiday','weekday','workingday','weathersit','temp','atemp','hum','windspeed','registered']][:100]
+y = data['cnt'][:100]
+    
+randMethod.createGraph(X,y,['registered','temp','atemp','season','yr','weekday','hum'],200, LinearRegression()) 
+```
+createGraph(X,y,cols,i,func):
+* X: dataframe representing input variables and input data
+* y: dataframe representing ideal output
+* cols: which variables should be displayed on the graph
+* i: # of random change iterations for each variable category in X
+* func: machine learning algorithm (could be an interpretable or black box algorithm)
 
 ## Relevant Files/Links
 * randMethod.py: Contains the code to the RandomGen model agnostic method. "import randMethod" in order to get access to the relevant functions in the file.
