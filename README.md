@@ -32,6 +32,7 @@ y = data['cnt'][:100]
     
 randMethod.createGraph(X,y,['registered','temp','atemp','season','yr','weekday','hum'],200, LinearRegression()) 
 ```
+![Image of Yaktocat](https://github.com/huangdaweiUCHICAGO/ethicsProject/blob/master/misc/graph.PNG)
 createGraph(X,y,cols,i,func):
 * X: dataframe representing input variables and input data
 * y: dataframe representing ideal output
