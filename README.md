@@ -1,5 +1,5 @@
 # Project Documentation
-Welcome! This is Dawei Huang's project documentation for UChicago Ethics Project.
+Welcome! This is Dawei Huang's project documentation for UChicago Ethics Project: Interpetability of Machine Learning.
 
 ## Introduction
 The interpretability of machine learning algorithms must be accessed since the legitimacy of implementation must rely on whether or not humans have a good understanding of the decisions promoted by such algorithms given certain inputs. While some ML models based on linear regressions and decision trees are more readily interpretable, others like neural networks and random forst algorithms are rather ambiguous due to the complexity of its inner mechanisms. The reference of the latter two models as "black box" models is a nod to the difficulty in unraveling its mechanisms and thus would be much less interpretable to human investigation. 
