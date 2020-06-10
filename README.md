@@ -29,15 +29,29 @@ data = pd.read_table("airfoil_self_noise.dat")
 X = data.loc[:, data.columns != 'Soundpressure']
 y = data['Soundpressure']
     
-randMethod.createGraph(X,y,list(X.columns),300, LinearRegression()) 
+randMethod.createGraph(X,y,list(X.columns),300, LinearRegression(), False) 
 ```
 ![Image of Graph](https://github.com/huangdaweiUCHICAGO/ethicsProject/blob/master/misc/graph.PNG)
+
+Graph without smoothing
+```
+randMethod.createGraph(X,y,list(X.columns),100, RandomForestRegressor(),False) #without smoothing 
+```
+![Image of Graph](https://github.com/huangdaweiUCHICAGO/ethicsProject/blob/master/misc/graph1.PNG)
+
+Graph with smoothing
+```
+randMethod.createGraph(X,y,list(X.columns),100, RandomForestRegressor(),True) #with smoothing 
+```
+![Image of Graph](https://github.com/huangdaweiUCHICAGO/ethicsProject/blob/master/misc/graph2.PNG)
+
 createGraph(X,y,cols,i,func):
 * X: dataframe representing input variables and input data
 * y: dataframe representing ideal output
 * cols: which variables should be displayed on the graph
 * i: # of random change iterations for each variable category in X
 * func: machine learning algorithm (could be an interpretable or black box algorithm)
+* smooth: (True/False) smooths out the graph for aesthetic purposes
 
 ## Relevant Files/Links
 * randMethod.py: Contains the code to the RandomGen model agnostic method. "import randMethod" in order to get access to the relevant functions in the file.
