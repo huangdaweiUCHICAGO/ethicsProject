@@ -48,6 +48,13 @@ createGraph(X,y,cols,i,func):
 * func: machine learning algorithm (could be an interpretable or black box algorithm)
 * smooth: (True/False) smooths out the graph for aesthetic purposes
 
+## Test the accuracy of randMethod.py
+use accuracyScore(X,y,col,i,func,ideal,iteration)
+* ideal: list representing the two features with the most significant weights
+* iteration: # of trials you would like to run randMethod.py
+
+accuracyScore checks whether or not randMethod.py contains the top few significant features with the most significant weights. This function runs over a determined number of trials. Note that this method would run randMethod.py so it is very time consuming.
+
 ## Relevant Files/Links
 * randMethod.py: Contains the code to the RandomGen model agnostic method. "import randMethod" in order to get access to the relevant functions in the file.
 * project.ipynb: Contains examples and possible applications of the RandomGen model agnostic method on different kinds of dataSets. Refer to this file for more information on how to run my code. Also includes insights that I gathered while running my code. 
