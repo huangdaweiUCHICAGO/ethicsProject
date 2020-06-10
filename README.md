@@ -33,14 +33,9 @@ randMethod.createGraph(X,y,list(X.columns),300, LinearRegression(), False)
 ```
 ![Image of Graph](https://github.com/huangdaweiUCHICAGO/ethicsProject/blob/master/misc/graph.PNG)
 
-Graph without smoothing
+Graph without smoothing (left) vs Graph with smoothing (right)
 ```
 randMethod.createGraph(X,y,list(X.columns),100, RandomForestRegressor(),False) #without smoothing 
-```
-![Image of Graph](https://github.com/huangdaweiUCHICAGO/ethicsProject/blob/master/misc/graph1.PNG)
-
-Graph with smoothing
-```
 randMethod.createGraph(X,y,list(X.columns),100, RandomForestRegressor(),True) #with smoothing 
 ```
 ![Image of Graph](https://github.com/huangdaweiUCHICAGO/ethicsProject/blob/master/misc/graph2.PNG)
