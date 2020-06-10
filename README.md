@@ -31,7 +31,7 @@ y = data['Soundpressure']
     
 randMethod.createGraph(X,y,list(X.columns),300, LinearRegression()) 
 ```
-![Image of Yaktocat](https://github.com/huangdaweiUCHICAGO/ethicsProject/blob/master/misc/graph.PNG)
+![Image of Graph](https://github.com/huangdaweiUCHICAGO/ethicsProject/blob/master/misc/graph.PNG)
 createGraph(X,y,cols,i,func):
 * X: dataframe representing input variables and input data
 * y: dataframe representing ideal output
