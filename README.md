@@ -38,7 +38,7 @@ Graph without smoothing (left) vs Graph with smoothing (right)
 randMethod.createGraph(X,y,list(X.columns),100, RandomForestRegressor(),False) #without smoothing 
 randMethod.createGraph(X,y,list(X.columns),100, RandomForestRegressor(),True) #with smoothing 
 ```
-![Image of Graph](https://github.com/huangdaweiUCHICAGO/ethicsProject/blob/master/misc/graph2.PNG)
+![Image of Graph](https://github.com/huangdaweiUCHICAGO/ethicsProject/blob/master/misc/graph2.png)
 
 createGraph(X,y,cols,i,func):
 * X: dataframe representing input variables and input data
