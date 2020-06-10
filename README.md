@@ -18,19 +18,18 @@ In this jupyter notebook file, we will be testing this randomGen model-agnostic 
 ## How to run randMethod.py
 Here is an example on how we use randomGen to access the weights of variables in a linear regression:
 ```
-import randMethod
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-from sklearn.linear_model import LinearRegression
 
-data = pd.read_csv('hour.csv')
-dataSamp = data.sample(n=100)
+#data = pd.read_csv('airfoil_self_noise.dat')
+data = pd.read_table("airfoil_self_noise.dat")
 
-X = data[['season','yr','hr','holiday','weekday','workingday','weathersit','temp','atemp','hum','windspeed','registered']][:100]
-y = data['cnt'][:100]
+
+X = data.loc[:, data.columns != 'Soundpressure']
+y = data['Soundpressure']
     
-randMethod.createGraph(X,y,['registered','temp','atemp','season','yr','weekday','hum'],200, LinearRegression()) 
+randMethod.createGraph(X,y,list(X.columns),300, LinearRegression()) 
 ```
 ![Image of Yaktocat](https://github.com/huangdaweiUCHICAGO/ethicsProject/blob/master/misc/graph.PNG)
 createGraph(X,y,cols,i,func):
