@@ -62,4 +62,4 @@ accuracyScore checks whether or not randMethod.py contains the top few significa
 * projectProposal: My project proposal.
 * risk_factors_cervical_cancer.csv: Risks Factors -> Cervical Cancer Diagnosis database
 * hour.csv: Environmental Conditions -> # of bikes rented per hour
-* Link to 3-minute Video:
+* Link to 3-minute Video: https://www.youtube.com/watch?v=_BSO8KOrjUY
